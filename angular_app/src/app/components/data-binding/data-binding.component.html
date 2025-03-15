@@ -1,0 +1,26 @@
+<h2>Data Binding</h2>
+<h3>TS to HTML (interpolation)</h3>
+
+<p>{{courseName}}</p>
+
+<input type="{{inputType}}" value="{{courseName}}">
+<br />
+<img src="{{imgUrl}}" alt="" width="200">
+
+<h3>TS to HTML (property binding)</h3>
+
+<p [innerHTML]="courseName"></p>
+
+<input [type]="inputType" [value]="courseName" />
+<br>
+<img [src]="imgUrl" alt="" width="200">
+
+<h3>Event binding</h3>
+
+<button (click)="changeCoureName()">Change Course Name</button>
+<button (click)="showAlert('Hello World')">Say Hello</button>
+<button (click)="showAlert('Hello Maaz')">Say Hello</button>
+
+<h3>Two way data binding - ngModel</h3>
+
+<input type="text" [(ngModel)]="courseName" >
