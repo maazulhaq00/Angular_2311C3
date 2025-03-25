@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { DataBindingComponent } from './components/data-binding/data-binding.component';
-import { StructuralDirectivesComponent } from './components/structural-directives/structural-directives.component';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, DataBindingComponent, StructuralDirectivesComponent ],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,52 @@
+
+<div [ngClass]="mode" >
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+</div>
+
+<button (click)="switchToDarkMode()"> Dark Mode </button>
+<button (click)="switchToLightMode()"> Light Mode </button>
+<button (click)="switchMode()"> Change Mode </button>
+
+<div [ngClass]="isLight ? 'light' : 'dark' " >
+    <h1>Hello World</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, quo et corrupti sint ratione molestiae
+        veritatis consectetur, neque iure cupiditate fuga voluptatum odio id eveniet unde corporis quam, ut aut.</p>
+</div>
+<button (click)="toggleMode()">toggle mode</button>
+
+<!-- 
+<div [ngClass]="pw == cpw ? 'green' : 'red' ">
+
+</div> -->
+
+<table [ngStyle]="{'border': '1px solid black', 'border-radius': '15px'}">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Batch Code</th>
+    </tr>
+
+    <tr *ngFor="let stud of students">
+        <td>{{stud.name}}</td>
+        <td [ngStyle]="{'background-color': stud.Age >=20 ? 'gray': 'yellow'}">{{stud.Age}}</td>
+        <td>{{stud.batchCode}}</td>
+    </tr>
+</table>

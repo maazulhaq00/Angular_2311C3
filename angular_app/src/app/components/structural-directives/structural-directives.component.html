@@ -1,5 +1,40 @@
+
 <img *ngIf="isImgVisible" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="" width="200">
 <br />
 <button (click)="hideImg()">Hide</button>
 <button (click)="showImg()">Show</button>
 <button (click)="toggleImg()">Toggle</button>
+
+<br /><br />
+
+<input type="text" placeholder="Password"  [(ngModel)]="password" /><br />
+<input type="text" placeholder="Confirm Password"  [(ngModel)]="cpassword" /><br />
+
+<p>Password: {{password}}</p>
+<p>Confirm Password: {{cpassword}}</p>
+
+<p style="color: green;" *ngIf="password == cpassword">Passwords Match</p>
+
+<ul>
+    <li *ngFor="let city of citiesArr" >{{city}}</li>
+</ul>
+
+<select>
+    <option *ngFor="let cityName of citiesArr" value="{{cityName}}" >
+        {{cityName}}
+    </option>
+</select>
+
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Batch Code</th>
+    </tr>
+
+    <tr *ngFor="let stud of students">
+        <td>{{stud.name}}</td>
+        <td>{{stud.Age}}</td>
+        <td>{{stud.batchCode}}</td>
+    </tr>
+</table>
