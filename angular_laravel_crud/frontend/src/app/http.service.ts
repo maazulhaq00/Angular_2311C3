@@ -15,4 +15,7 @@ export class HttpService {
   getAllProducts(){
     return this.httpClient.get<IProduct[]>(this.baseURL + '/products')
   }
+  createProduct(product: IProduct){
+    return this.httpClient.post(this.baseURL + '/products', product);
+  }
 }

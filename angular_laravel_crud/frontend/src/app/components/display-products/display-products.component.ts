@@ -18,7 +18,7 @@ export class DisplayProductsComponent {
   ngOnInit(){
     this.httpService.getAllProducts().subscribe((result)=>{
 
-      console.log(result);
+      // console.log(result);
       this.productsList = result;
       console.log(this.productsList);
       

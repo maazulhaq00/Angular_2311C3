@@ -1,1 +1,7 @@
-<p>create-product works!</p>
+<h3>Create Product</h3>
+
+<input type="text" [(ngModel)]="product.prodName" placeholder="Enter Product Name" />
+<br /> <input type="text" [(ngModel)]="product.prodPrice" placeholder="Enter Product Price" />
+<br /> <input type="text" [(ngModel)]="product.prodDesc" placeholder="Enter Product Description" />
+<br />
+<button (click)="createProduct()">Create Product</button>
