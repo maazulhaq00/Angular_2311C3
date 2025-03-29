@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IProduct } from '../../interfaces/product';
 import { HttpService } from '../../http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-product',
@@ -12,6 +13,7 @@ import { HttpService } from '../../http.service';
 export class CreateProductComponent {
 
   httpService = inject(HttpService);
+  router = inject(Router);
 
   product : IProduct = {
     id : 0,
@@ -26,8 +28,10 @@ export class CreateProductComponent {
     console.log(this.product);
 
     this.httpService.createProduct(this.product).subscribe(()=>{
+      
       console.log("Product Added");
       
+      this.router.navigateByUrl("/all-prod");
     })
     
   }
